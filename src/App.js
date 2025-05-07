@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from 'https://www.stemzlearning.org/static/media/logo.c9017c166767dbbf195a.png'; // replace with your logo image if available
+import logo from ''; // replace with your logo image if available
 
 function App() {
   return (
