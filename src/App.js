@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg'; // place your uploaded logo image here
+import stemzLogo from './stemz-logo.png';
 
 function App() {
   return (
@@ -8,18 +8,18 @@ function App() {
       <header className="bg-white shadow sticky top-0 z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
           <div className="flex items-center">
-            <img src={logo} alt="STEMz Learning Logo" className="h-12 w-auto mr-3" />
+            <img src={stemzLogo} alt="STEMz Learning Logo" className="h-12 w-auto mr-3" />
             <span className="text-2xl font-bold text-green-700">STEMz Learning</span>
           </div>
           <nav className="space-x-6 hidden md:flex">
-            <a href="#" className="text-green-700 hover:text-green-900">Home</a>
-            <a href="#" className="hover:text-green-700">About Us</a>
-            <a href="#" className="hover:text-green-700">Online Classes</a>
-            <a href="#" className="hover:text-green-700">Self-Paced Classes</a>
-            <a href="#" className="hover:text-green-700">Course Boxes</a>
-            <a href="#" className="hover:text-green-700">News</a>
-            <a href="#" className="hover:text-green-700">Get Involved</a>
-            <a href="#" className="hover:text-green-700">Contact</a>
+            <a href="javascript:void(0)" className="text-green-700 hover:text-green-900">Home</a>
+            <a href="javascript:void(0)" className="hover:text-green-700">About Us</a>
+            <a href="javascript:void(0)" className="hover:text-green-700">Online Classes</a>
+            <a href="javascript:void(0)" className="hover:text-green-700">Self-Paced Classes</a>
+            <a href="javascript:void(0)" className="hover:text-green-700">Course Boxes</a>
+            <a href="javascript:void(0)" className="hover:text-green-700">News</a>
+            <a href="javascript:void(0)" className="hover:text-green-700">Get Involved</a>
+            <a href="javascript:void(0)" className="hover:text-green-700">Contact</a>
           </nav>
         </div>
       </header>
