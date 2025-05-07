@@ -12,13 +12,13 @@ function Header() {
         </div>
         <nav className="nav">
           <Link to="/">Home</Link>
-          <a href="#">About Us</a>
-          <a href="#">Online Classes</a>
-          <a href="#">Self-Paced Classes</a>
-          <a href="#">Course Boxes</a>
-          <a href="#">News</a>
-          <a href="#">Get Involved</a>
-          <a href="#">Contact</a>
+          <Link to="/about">About Us</Link>
+          <Link to="/online-classes">Online Classes</Link>
+          <Link to="/self-paced-classes">Self-Paced Classes</Link>
+          <Link to="/course-boxes">Course Boxes</Link>
+          <Link to="/news">News</Link>
+          <Link to="/get-involved">Get Involved</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
       </div>
     </header>

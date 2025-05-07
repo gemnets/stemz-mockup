@@ -1,0 +1,27 @@
+.footer {
+  background-color: #065f46; /* dark green */
+  color: #d1fae5; /* light green text */
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.social a {
+  margin: 0 0.5rem;
+  color: #d1fae5;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social a:hover {
+  color: #bbf7d0; /* brighter green on hover */
+  transform: scale(1.2);
+}
+
+.footer-text {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
