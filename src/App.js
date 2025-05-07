@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './assets/stemz-logo.png'; // place your uploaded logo image here
+import logo from './logo.svg'; // place your uploaded logo image here
 
 function App() {
   return (
