@@ -1,99 +1,97 @@
-import logo from './logo.svg';
+import React from 'react';
+import logo from 'https://www.stemzlearning.org/static/media/logo.c9017c166767dbbf195a.png'; // replace with your logo image if available
 
 function App() {
   return (
-    <div className="App min-h-screen bg-gray-50">
-      {/* Navbar */}
-      <nav className="bg-white shadow p-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-blue-600">STEMz Learning</div>
-        <div className="space-x-4 hidden md:flex">
-          <a href="#home" className="hover:text-blue-600">Home</a>
-          <a href="#about" className="hover:text-blue-600">About Us</a>
-          <a href="#classes" className="hover:text-blue-600">Online Classes</a>
-          <a href="#self-paced" className="hover:text-blue-600">Self-Paced Classes</a>
-          <a href="#courses" className="hover:text-blue-600">Course Boxes</a>
-          <a href="#news" className="hover:text-blue-600">News</a>
-          <a href="#involved" className="hover:text-blue-600">Get Involved</a>
-          <a href="#contact" className="hover:text-blue-600">Contact</a>
+    <div className="min-h-screen bg-gray-50 text-gray-800">
+      {/* Header */}
+      <header className="bg-white shadow-md">
+        <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
+          <div className="flex items-center">
+            <img src={logo} alt="STEMz Learning Logo" className="h-10 w-10 mr-2" />
+            <span className="text-xl font-bold text-blue-600">STEMz Learning</span>
+          </div>
+          <nav className="space-x-4 hidden md:flex">
+            <a href="#" className="hover:text-blue-600">Home</a>
+            <a href="#" className="hover:text-blue-600">About Us</a>
+            <a href="#" className="hover:text-blue-600">Online Classes</a>
+            <a href="#" className="hover:text-blue-600">Self-Paced Classes</a>
+            <a href="#" className="hover:text-blue-600">Course Boxes</a>
+            <a href="#" className="hover:text-blue-600">News</a>
+            <a href="#" className="hover:text-blue-600">Get Involved</a>
+            <a href="#" className="hover:text-blue-600">Contact</a>
+            <button className="ml-4 px-3 py-1 rounded bg-blue-600 text-white hover:bg-blue-700">Log In</button>
+          </nav>
         </div>
-        <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 ml-4">
-          Log In
-        </button>
-      </nav>
+      </header>
 
       {/* Hero Section */}
-      <section id="home" className="text-center py-16 px-4 bg-gradient-to-r from-blue-100 to-blue-50">
-        <h1 className="text-4xl font-extrabold mb-4">Education through experimentation.</h1>
-        <p className="text-xl text-gray-700 mb-6">
-          Making engaging curriculum accessible to all.
-        </p>
-        <img src={logo} alt="STEMz logo" className="w-24 h-24 mx-auto mb-6 animate-pulse" />
+      <section className="text-center py-12 bg-gradient-to-r from-blue-50 to-blue-100">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">Education through experimentation.</h1>
+        <p className="text-lg text-gray-700 mb-6">Making engaging curriculum accessible to all.</p>
         <div className="space-x-4">
-          <button className="px-6 py-3 bg-blue-500 text-white rounded hover:bg-blue-600">
+          <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
             Sign Up for Classes
           </button>
-          <button className="px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600">
+          <button className="px-6 py-2 bg-white border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50">
             Access Curriculum
           </button>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section id="about" className="py-12 px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Mission Statement</h2>
-        <p className="max-w-3xl mx-auto text-gray-700 mb-6">
+      {/* Mission Statement */}
+      <section className="max-w-5xl mx-auto p-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center">
+          <span role="img" aria-label="Science" className="mr-2">🧪</span> Mission Statement
+        </h2>
+        <p className="text-gray-700 mb-6">
           STEMz Learning strives to provide elementary school students with curriculum centered around
           experiments and hands-on learning. Our main goal is to introduce complex topics in palatable,
           engaging ways that inspire kids to learn more.
         </p>
       </section>
 
-      {/* Who Are We Section */}
-      <section id="who" className="bg-white py-12 px-4 text-center shadow-inner">
-        <h2 className="text-3xl font-bold mb-4">Who Are We?</h2>
-        <p className="max-w-3xl mx-auto text-gray-700 mb-6">
-          STEMz Learning is a youth-led outreach 501(c)3 nonprofit based in Folsom, California, that wants
-          to make STEM education more accessible to elementary school students, grades 1–6. We provide free
-          curriculum for both self-guided and parent-guided learners as well as free online courses.
-        </p>
+      {/* Who Are We */}
+      <section className="bg-white py-8">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-2xl font-bold mb-4">Who Are We?</h2>
+          <p className="text-gray-700 mb-6">
+            STEMz Learning is a youth-led outreach 501(c)3 nonprofit based in Folsom, California, making STEM
+            education accessible to elementary school students, grades 1-6. We provide free curriculum for
+            both self-guided and parent-guided learners as well as free online courses.
+          </p>
+        </div>
       </section>
 
-      {/* Cards Section */}
-      <section className="py-12 px-4 grid gap-8 md:grid-cols-3">
-        <div className="bg-blue-50 p-6 rounded-lg shadow text-center">
-          <h3 className="text-xl font-bold mb-2">Developing Courses</h3>
-          <p className="text-gray-700 mb-4">
+      {/* Features Section */}
+      <section className="max-w-5xl mx-auto p-8 grid gap-6 md:grid-cols-3">
+        <div className="bg-blue-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+          <h3 className="font-bold mb-2">Developing Courses</h3>
+          <p>
             We are constantly creating and improving our curriculum so that your child always has new and
             exciting things to learn about.
           </p>
-          <button className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600">
-            Request a Course
-          </button>
+          <button className="mt-2 text-blue-600 hover:underline">Request a Course →</button>
         </div>
-        <div className="bg-green-50 p-6 rounded-lg shadow text-center">
-          <h3 className="text-xl font-bold mb-2">Recruiting Volunteers</h3>
-          <p className="text-gray-700 mb-4">
-            We are recruiting hardworking high-school and college students to teach STEM topics and develop
-            curriculum! Apply now.
+        <div className="bg-blue-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+          <h3 className="font-bold mb-2">Recruiting Dedicated Volunteers</h3>
+          <p>
+            We are recruiting hard-working high-school and college students to teach STEM topics to
+            elementary school students and develop curriculum!
           </p>
-          <button className="px-4 py-2 bg-green-500 text-white rounded hover:bg-green-600">
-            Apply
-          </button>
+          <button className="mt-2 text-blue-600 hover:underline">Apply →</button>
         </div>
-        <div className="bg-yellow-50 p-6 rounded-lg shadow text-center">
-          <h3 className="text-xl font-bold mb-2">Community Connections</h3>
-          <p className="text-gray-700 mb-4">
+        <div className="bg-blue-100 p-4 rounded-lg shadow hover:shadow-lg transition">
+          <h3 className="font-bold mb-2">Connecting with Local Community</h3>
+          <p>
             We are reaching out to local elementary schools and community programs to host in-person events.
           </p>
-          <button className="px-4 py-2 bg-yellow-500 text-white rounded hover:bg-yellow-600">
-            Learn More
-          </button>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-800 text-gray-200 text-center p-4">
-        &copy; {new Date().getFullYear()} STEMz Learning. All rights reserved.
+      <footer className="bg-gray-200 text-center p-4 mt-8">
+        © {new Date().getFullYear()} STEMz Learning. All rights reserved.
       </footer>
     </div>
   );
