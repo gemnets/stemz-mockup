@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from ''; // replace with your logo image if available
+import logo from './logo.svg'; // replace with your logo image if available
 
 function App() {
   return (
