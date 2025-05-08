@@ -1,4 +1,4 @@
-/* General Styles (unchanged) */
+/* General Styles */
 .home-container {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #f0fdf4, #fff, #dcfce7);
@@ -162,6 +162,7 @@
   color: #047857;
 }
 
+/* Navigation */
 .nav {
   display: flex;
   align-items: center;
@@ -265,6 +266,12 @@
     display: none;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 60px; /* Positioning it below the header */
+    right: 0;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
   /* When the nav is open */
@@ -286,6 +293,23 @@
     transform: rotate(-45deg);
     position: relative;
     top: -8px;
+  }
+
+  /* Align hamburger button next to the logo */
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    margin-left: auto;
+    display: block;
   }
 }
 
