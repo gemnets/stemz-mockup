@@ -1,18 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About';
+import About from './pages/About'; 
 import OnlineClasses from './pages/OnlineClasses';
 import SelfPacedClasses from './pages/SelfPacedClasses';
 import CourseBoxes from './pages/CourseBoxes';
 import News from './pages/News';
 import GetInvolved from './pages/GetInvolved';
 import Contact from './pages/Contact';
-import Login from './pages/Login'; // Make sure you have this component
+import Login from './pages/Login'; 
+import Navbar from './components/Navbar';  // ← ADD THIS
 
 function App() {
   return (
     <Router>
+      <Navbar />   {/* ← FIXED here */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

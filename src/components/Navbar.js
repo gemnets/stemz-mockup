@@ -15,7 +15,14 @@ const Navbar = () => {
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           STEMz Learning
         </Link>
-        <div className="menu-icon" onClick={handleClick}>
+        <div 
+          className="menu-icon" 
+          onClick={handleClick} 
+          role="button" 
+          tabIndex="0" 
+          aria-label="Toggle Menu"
+          onKeyDown={(e) => e.key === 'Enter' && handleClick()}
+        >
           {click ? <FaTimes /> : <FaBars />}
         </div>
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
