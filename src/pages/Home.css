@@ -26,11 +26,13 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-buttons button,
 .hero-buttons a {
-  margin: 0 0.5rem;
+  margin: 0.5rem;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   font-weight: bold;
@@ -174,4 +176,107 @@
   color: #d1fae5;
   text-align: center;
   padding: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .section {
+    padding: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.75rem;
+  }
+
+  .section p {
+    font-size: 1rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.125rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+
+  .link-btn {
+    font-size: 1rem;
+  }
+}
+
+/* Large Screen (Desktop) Responsiveness */
+@media (min-width: 1200px) {
+  .hero {
+    padding: 6rem 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .hero-buttons button,
+  .hero-buttons a {
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+  }
+
+  .section {
+    padding: 2rem;
+  }
+
+  .features {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .feature-card {
+    padding: 1.75rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card p {
+    font-size: 1rem;
+  }
+
+  .link-btn {
+    font-size: 1.2rem;
+  }
 }
