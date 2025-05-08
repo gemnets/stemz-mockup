@@ -1,3 +1,4 @@
+/* General Styles (unchanged) */
 .home-container {
   min-height: 100vh;
   background: linear-gradient(to bottom right, #f0fdf4, #fff, #dcfce7);
@@ -161,6 +162,11 @@
   color: #047857;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+}
+
 .nav a {
   margin-left: 1rem;
   color: #047857;
@@ -252,6 +258,13 @@
     background-color: #047857; /* Green color for hamburger lines */
     margin: 5px 0;
     transition: all 0.3s ease;
+  }
+
+  /* Hide nav initially */
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
   }
 
   /* When the nav is open */
