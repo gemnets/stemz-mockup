@@ -8,6 +8,7 @@ import CourseBoxes from './pages/CourseBoxes';
 import News from './pages/News';
 import GetInvolved from './pages/GetInvolved';
 import Contact from './pages/Contact';
+import Login from './pages/Login'; // Make sure you have this component
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
