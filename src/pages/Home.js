@@ -3,12 +3,15 @@ import './Home.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import '../components/PhotoCarousel.css'; // Correct path to the CSS file
+import PhotoCarousel from '../components/MobilePhotoCarousel';
+
 
 function Home() {
   return (
     <div className="home-container">
       <Header />
-      
+
       <section className="hero">
         <h1>Education Through Experimentation</h1>
         <p>Making engaging curriculum accessible to all.</p>
@@ -40,6 +43,13 @@ function Home() {
             both self-guided and parent-guided learners as well as free online courses.
           </p>
         </div>
+      </section>
+
+      {/* Our Work in Action slider section */}
+      <section className="section our-work">
+        <h2>Our Work in Action</h2>
+        {/* ✅ Replace the old slider with the PhotoCarousel component */}
+        <PhotoCarousel />
       </section>
 
       <section className="features">

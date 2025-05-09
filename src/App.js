@@ -9,12 +9,12 @@ import News from './pages/News';
 import GetInvolved from './pages/GetInvolved';
 import Contact from './pages/Contact';
 import Login from './pages/Login'; 
-import Navbar from './components/Navbar';  // ← ADD THIS
+// import Navbar from './components/Navbar';  // ← REMOVED this line
 
 function App() {
   return (
     <Router>
-      <Navbar />   {/* ← FIXED here */}
+      {/* <Navbar /> ← REMOVED this line */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

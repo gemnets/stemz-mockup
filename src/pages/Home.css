@@ -1,26 +1,37 @@
-/* General Styles */
+:root {
+  --green-dark: #065f46;
+  --green-primary: #047857;
+  --green-light: #bbf7d0;
+  --green-bg: #dcfce7;
+  --gray-dark: #374151;
+  --gray-light: #4b5563;
+  --gray-lighter: #6b7280;
+  --bg-light: #f0fdf4;
+  --white: #ffffff;
+}
+
 .home-container {
   min-height: 100vh;
-  background: linear-gradient(to bottom right, #f0fdf4, #fff, #dcfce7);
-  color: #374151;
+  background: linear-gradient(to bottom right, var(--bg-light), var(--white), var(--green-bg));
+  color: var(--gray-dark);
   font-family: sans-serif;
 }
 
 .hero {
   text-align: center;
   padding: 4rem 1rem;
-  background-color: #dcfce7;
+  background-color: var(--green-bg);
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #065f46;
+  color: var(--green-dark);
 }
 
 .hero p {
   margin: 1rem 0 2rem;
   font-size: 1.25rem;
-  color: #047857;
+  color: var(--green-primary);
 }
 
 .hero-buttons {
@@ -36,31 +47,39 @@
   margin: 0.5rem;
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
+  outline: none;
+}
+
+.hero-buttons button:focus,
+.hero-buttons a:focus {
+  box-shadow: 0 0 0 3px var(--green-light);
 }
 
 .primary-btn {
-  background-color: #047857;
-  color: white;
+  background-color: var(--green-primary);
+  color: var(--white);
   border: none;
 }
 
-.primary-btn:hover {
-  background-color: #065f46;
+.primary-btn:hover,
+.primary-btn:focus {
+  background-color: var(--green-dark);
 }
 
 .secondary-btn {
   background-color: transparent;
-  color: #047857;
-  border: 2px solid #047857;
+  color: var(--green-primary);
+  border: 2px solid var(--green-primary);
 }
 
-.secondary-btn:hover {
-  background-color: #bbf7d0;
+.secondary-btn:hover,
+.secondary-btn:focus {
+  background-color: var(--green-light);
 }
 
 .section {
@@ -71,17 +90,17 @@
 
 .section h2 {
   font-size: 2rem;
-  color: #065f46;
+  color: var(--green-dark);
   margin-bottom: 1rem;
 }
 
 .section p {
-  color: #4b5563;
+  color: var(--gray-light);
   line-height: 1.6;
 }
 
 .who {
-  background-color: #f0fdf4;
+  background-color: var(--bg-light);
 }
 
 .features {
@@ -94,44 +113,46 @@
 }
 
 .feature-card {
-  background-color: white;
-  border: 1px solid #bbf7d0;
+  background-color: var(--white);
+  border: 1px solid var(--green-light);
   border-radius: 1rem;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .feature-card h3 {
   font-size: 1.25rem;
-  color: #047857;
+  color: var(--green-primary);
   margin-bottom: 0.5rem;
 }
 
 .feature-card p {
-  color: #6b7280;
+  color: var(--gray-lighter);
   margin-bottom: 1rem;
 }
 
 .link-btn {
   background: none;
-  color: #047857;
+  color: var(--green-primary);
   border: none;
   font-weight: bold;
   cursor: pointer;
 }
 
-.link-btn:hover {
+.link-btn:hover,
+.link-btn:focus {
   text-decoration: underline;
 }
 
 .header {
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 50;
@@ -159,10 +180,9 @@
 .logo span {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #047857;
+  color: var(--green-primary);
 }
 
-/* Navigation */
 .nav {
   display: flex;
   align-items: center;
@@ -170,27 +190,24 @@
 
 .nav a {
   margin-left: 1rem;
-  color: #047857;
+  color: var(--green-primary);
   text-decoration: none;
 }
 
-.nav a:hover {
-  color: #065f46;
+.nav a:hover,
+.nav a:focus {
+  color: var(--green-dark);
 }
 
 .footer {
-  background-color: #065f46;
-  color: #d1fae5;
+  background-color: var(--green-dark);
+  color: var(--green-bg);
   text-align: center;
   padding: 1rem;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .hero {
-    padding: 3rem 1rem;
-  }
-
   .hero h1 {
     font-size: 2rem;
   }
@@ -199,50 +216,20 @@
     font-size: 1.125rem;
   }
 
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
   .hero-buttons button,
   .hero-buttons a {
     padding: 1rem 2rem;
     font-size: 1.1rem;
   }
 
-  .section {
-    padding: 1.5rem;
-  }
-
   .section h2 {
     font-size: 1.75rem;
-  }
-
-  .section p {
-    font-size: 1rem;
   }
 
   .features {
     grid-template-columns: 1fr;
   }
 
-  .feature-card {
-    padding: 1.25rem;
-  }
-
-  .feature-card h3 {
-    font-size: 1.125rem;
-  }
-
-  .feature-card p {
-    font-size: 0.95rem;
-  }
-
-  .link-btn {
-    font-size: 1rem;
-  }
-
-  /* Hamburger icon */
   .hamburger {
     display: block;
     cursor: pointer;
@@ -256,32 +243,29 @@
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #047857; /* Green color for hamburger lines */
+    background-color: var(--green-primary);
     margin: 5px 0;
     transition: all 0.3s ease;
   }
 
-  /* Hide nav initially */
   .nav {
     display: none;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 60px; /* Positioning it below the header */
+    top: 60px;
     right: 0;
-    background-color: white;
+    background-color: var(--white);
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
-  /* When the nav is open */
   .nav.open {
     display: flex;
   }
 
   .hamburger.open span:nth-child(1) {
     transform: rotate(45deg);
-    position: relative;
     top: 8px;
   }
 
@@ -291,25 +275,7 @@
 
   .hamburger.open span:nth-child(3) {
     transform: rotate(-45deg);
-    position: relative;
     top: -8px;
-  }
-
-  /* Align hamburger button next to the logo */
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-
-  .hamburger {
-    margin-left: auto;
-    display: block;
   }
 }
 
@@ -333,10 +299,6 @@
     font-size: 1.25rem;
   }
 
-  .section {
-    padding: 2rem;
-  }
-
   .features {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -348,12 +310,5 @@
   .feature-card h3 {
     font-size: 1.5rem;
   }
-
-  .feature-card p {
-    font-size: 1rem;
-  }
-
-  .link-btn {
-    font-size: 1.2rem;
-  }
 }
+
