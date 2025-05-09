@@ -1,27 +1,43 @@
-.footer {
-  background-color: #065f46; /* dark green */
-  color: #d1fae5; /* light green text */
-  padding: 1rem 0;
-  text-align: center;
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Space between the icons */
+  margin-top: 20px;
 }
 
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
+.social-icon {
+  font-size: 40px; /* Larger icon size */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block;
 }
 
-.social a {
-  margin: 0 0.5rem;
-  color: #d1fae5;
-  transition: color 0.3s ease, transform 0.3s ease;
+/* Ensure hover effects work */
+.social-icon:hover {
+  transform: scale(1.1); /* Slight zoom effect */
+  opacity: 0.8;
 }
 
-.social a:hover {
-  color: #bbf7d0; /* brighter green on hover */
-  transform: scale(1.2);
+/* Twitter Blue */
+.social-icon.twitter {
+  color: #1DA1F2;
 }
 
-.footer-text {
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+/* LinkedIn Blue */
+.social-icon.linkedin {
+  color: #0077B5;
+}
+
+/* Facebook Blue */
+.social-icon.facebook {
+  color: #1877F2;
+}
+
+/* Instagram Red */
+.social-icon.instagram {
+  color: #E4405F;
+}
+
+/* TikTok Black */
+.social-icon.tiktok {
+  color: #010101;
 }
