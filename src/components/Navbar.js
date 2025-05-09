@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Navbar.css';  // Assuming you have a CSS file for the Navbar
+import './Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,12 +10,8 @@ const Navbar = () => {
 
   return (
     <header className="navbar">
-      <div className="logo">
-        <a href="/">STEMz Learning</a>
-      </div>
-
       {/* Hamburger Menu Button */}
-      <button className="hamburger" onClick={toggleMenu}>
+      <div className="hamburger" onClick={toggleMenu}>
         <svg
           stroke="currentColor"
           fill="currentColor"
@@ -28,7 +24,12 @@ const Navbar = () => {
         >
           <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
         </svg>
-      </button>
+      </div>
+
+      {/* Logo */}
+      <div className="logo">
+        <a href="/">STEMz Learning</a>
+      </div>
 
       {/* Menu Items */}
       <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
