@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons for hamburger
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const handleClick = () => setClick(!click); // Toggles the menu open/close
+  const closeMobileMenu = () => setClick(false); // Closes the menu
 
   return (
     <nav className="navbar">
@@ -15,16 +15,19 @@ const Navbar = () => {
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           STEMz Learning
         </Link>
-        <div 
-          className="menu-icon" 
-          onClick={handleClick} 
-          role="button" 
-          tabIndex="0" 
+        {/* Hamburger menu for mobile view */}
+        <div
+          className="menu-icon"
+          onClick={handleClick}
+          role="button"
+          tabIndex="0"
           aria-label="Toggle Menu"
           onKeyDown={(e) => e.key === 'Enter' && handleClick()}
         >
-          {click ? <FaTimes /> : <FaBars />}
+          {click ? <FaTimes /> : <FaBars />} {/* Toggle between hamburger and close icon */}
         </div>
+
+        {/* Nav links - visible on desktop and toggled on mobile */}
         <ul className={click ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
@@ -32,7 +35,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/about" className="nav-links" onClick={closeMobileMenu}>
+            <Link to="/about-us" className="nav-links" onClick={closeMobileMenu}>
               About Us
             </Link>
           </li>
