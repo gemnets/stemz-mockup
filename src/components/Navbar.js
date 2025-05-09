@@ -15,6 +15,7 @@ const Navbar = () => {
         <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
           STEMz Learning
         </Link>
+
         {/* Hamburger menu for mobile view */}
         <div
           className="menu-icon"
