@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons for hamburger
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -16,16 +15,18 @@ const Navbar = () => {
           STEMz Learning
         </Link>
 
-        {/* Hamburger menu for mobile view */}
+        {/* Custom Hamburger Menu */}
         <div
-          className="menu-icon"
+          className="hamburger"
           onClick={handleClick}
           role="button"
           tabIndex="0"
           aria-label="Toggle Menu"
           onKeyDown={(e) => e.key === 'Enter' && handleClick()}
         >
-          {click ? <FaTimes /> : <FaBars />} {/* Toggle between hamburger and close icon */}
+          <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 448 512" height="20" width="20" xmlns="http://www.w3.org/2000/svg" style={{ color: 'black' }}>
+            <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+          </svg>
         </div>
 
         {/* Nav links - visible on desktop and toggled on mobile */}
