@@ -1,12 +1,13 @@
 import React from 'react';
-import './Home.css';
+import '../components/Home.css';
+import '../pages/Home.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import '../components/PhotoCarousel.css'; // Correct path to the CSS file
 import PhotoCarousel from '../components/MobilePhotoCarousel';
 import '../components/Navbar.css';
-
+import mapImage from '../assets/map.png'; // ✅ import the image
 
 function Home() {
   return (
@@ -25,23 +26,27 @@ function Home() {
 
       {/* Mission + Who side by side row with separator */}
       <section className="section mission-who-row">
-        <div className="mission-box">
-          <h2>🌟 Mission Statement</h2>
+         {/* ✅ Added map image on the left */}
+        <img src={mapImage} alt="Map" className="map-image" />
+        
+        {/* Now the "Who Are We?" section comes before the mission statement */}
+        <div className="who-box">
+          <h2> Who Are We?</h2>
           <p>
-            STEMz Learning strives to provide elementary school students with curriculum centered around
-            experiments and hands-on learning. Our main goal is to introduce complex topics in palatable,
-            engaging ways that inspire kids to learn more.
+            STEMz Learning is a youth-led outreach 501(c)3 nonprofit based in Folsom, California, making STEM
+            education accessible to elementary school students, grades 1–6. We provide free curriculum for
+            both self-guided and parent-guided learners as well as free online courses.
           </p>
         </div>
 
         <div className="vertical-separator"></div>
 
-        <div className="who-box">
-          <h2>👩‍🔬 Who Are We?</h2>
+        <div className="mission-box">
+          <h2> Mission Statement</h2>
           <p>
-            STEMz Learning is a youth-led outreach 501(c)3 nonprofit based in Folsom, California, making STEM
-            education accessible to elementary school students, grades 1–6. We provide free curriculum for
-            both self-guided and parent-guided learners as well as free online courses.
+            STEMz Learning strives to provide elementary school students with curriculum centered around
+            experiments and hands-on learning. Our main goal is to introduce complex topics in palatable,
+            engaging ways that inspire kids to learn more.
           </p>
         </div>
       </section>

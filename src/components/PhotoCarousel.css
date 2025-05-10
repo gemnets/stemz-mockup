@@ -1,8 +1,9 @@
 /* PhotoCarousel.css */
 .mobile-photo-carousel {
-  max-width: 100%;
+  width: 100%; /* Ensure it takes full width */
+  max-width: 1575px; /* Increased width by another 1.5 times */
   margin: 0 auto;
-  height: 400px; /* Set desktop height here */
+  height: 450px; /* Set the height similar to the height of mission/who box */
   overflow: hidden;
   position: relative;
 }

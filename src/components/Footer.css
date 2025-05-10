@@ -1,43 +1,61 @@
+/* Ensure the footer stays at the bottom without overlapping content */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1; /* pushes footer down if content is short */
+}
+
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative; /* no need for fixed */
+}
+
+/* Footer icons */
 .footer-icons {
   display: flex;
   justify-content: center;
-  gap: 30px; /* Space between the icons */
-  margin-top: 20px;
+  gap: 30px;
 }
 
 .social-icon {
-  font-size: 40px; /* Larger icon size */
+  font-size: 40px;
   transition: transform 0.3s ease, opacity 0.3s ease;
   display: inline-block;
 }
 
-/* Ensure hover effects work */
 .social-icon:hover {
-  transform: scale(1.1); /* Slight zoom effect */
+  transform: scale(1.1);
   opacity: 0.8;
 }
 
-/* Twitter Blue */
-.social-icon.twitter {
-  color: #1DA1F2;
-}
+/* Social icon colors */
+.social-icon.twitter { color: #1DA1F2; }
+.social-icon.linkedin { color: #0077B5; }
+.social-icon.facebook { color: #1877F2; }
+.social-icon.instagram { color: #E4405F; }
+.social-icon.tiktok { color: #010101; }
 
-/* LinkedIn Blue */
-.social-icon.linkedin {
-  color: #0077B5;
-}
-
-/* Facebook Blue */
-.social-icon.facebook {
-  color: #1877F2;
-}
-
-/* Instagram Red */
-.social-icon.instagram {
-  color: #E4405F;
-}
-
-/* TikTok Black */
-.social-icon.tiktok {
-  color: #010101;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 0;
+  }
+  .social-icon {
+    font-size: 28px;
+  }
+  .footer-icons {
+    gap: 20px;
+  }
 }

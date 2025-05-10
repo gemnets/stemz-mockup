@@ -9,6 +9,8 @@ import biochem from '../assets/biochem.jpg';
 import genetics from '../assets/genetics.jpg';
 import microbiology from '../assets/Microbiology.jpg';
 import defaultImg from '../assets/defaultcourseimg.jpg';
+import '../components/Navbar.css';
+
 
 
 const OnlineClasses = () => {

@@ -1,9 +1,9 @@
-/* Basic Styling for the Header */
+/* ================= Header ================= */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 20px; /* Adjust as needed */
+  padding: 20px 0;
   width: 100%;
 }
 
@@ -12,88 +12,138 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1500px; /* Adjust according to your desired layout */
+  max-width: 1500px;
   margin: 0 auto;
+  padding: 0 20px; /* Avoid content touching the edges */
 }
 
 .logo {
-  margin-left: auto; /* Push logo to the right */
-  padding-right: 190px; /* Add extra padding to move it further right */
+  margin-left: 0;
+  padding-right: 0;
 }
 
 .logo img {
-  width: 300px;  /* Adjust as needed */
+  width: 300px;
   height: auto;
 }
 
-/* Hamburger Menu Icon */
 .hamburger {
-  display: none; /* Hide hamburger by default */
+  display: none !important;
   cursor: pointer;
-  width: 30px; /* Set fixed width for better fit */
-  height: 25px; /* Set fixed height */
+  width: 30px;
+  height: 25px;
   position: absolute;
-  top: 20px; /* Position from the top of the header */
-  right: 45px; /* Position from the right side */
+  top: 20px;
+  right: 45px;
 }
 
-/* Navigation Links */
 .nav {
   display: flex;
   gap: 10px;
 }
 
 .nav--open {
-  display: flex; /* Show as flex when opened */
+  display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-/* Link Styling */
 .nav a {
   text-decoration: none;
   color: #333;
-  font-size: 18px;
+  font-size: 19px;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: row; /* Make sure items are aligned horizontally */
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .nav {
-    display: none; /* Hide menu by default on mobile */
+    display: none;
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 60px; /* Adjust below header */
+    top: 60px;
     right: 0;
     left: 0;
     background: #fff;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 1000;
-    width: 100%; /* Make the menu full width */
+    width: 100%;
   }
 
   .hamburger {
-    display: block; /* Show hamburger on mobile */
+    display: block !important;
   }
 
   .nav--open {
-    display: flex; /* Show menu when open */
+    display: flex;
   }
 
-  /* Adjust link font size and padding for mobile */
   .nav a {
-    font-size: 20px; /* Bigger font size for readability */
-    padding: 10px 0; /* Padding around links */
+    font-size: 20px;
+    padding: 10px 0;
   }
 
-  /* Ensure the logo is appropriately sized for mobile */
   .logo img {
-    width: 200px;  /* Smaller logo for mobile */
+    width: 200px;
   }
 }
+
+/* ================= Footer ================= */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.footer-container {
+  max-width: 1500px;
+  width: 100%;
+  padding: 0 20px; /* Add padding to prevent edge touch */
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 40px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.social-icon.twitter { color: #1DA1F2; }
+.social-icon.linkedin { color: #0077B5; }
+.social-icon.facebook { color: #1877F2; }
+.social-icon.instagram { color: #E4405F; }
+.social-icon.tiktok { color: #010101; }
