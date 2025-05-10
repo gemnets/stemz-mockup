@@ -32,7 +32,9 @@
   cursor: pointer;
   width: 30px; /* Set fixed width for better fit */
   height: 25px; /* Set fixed height */
-  position: relative;
+  position: absolute;
+  top: 20px; /* Position from the top of the header */
+  right: 10px; /* Position from the right side */
 }
 
 /* Navigation Links */
@@ -42,7 +44,7 @@
 }
 
 .nav--open {
-  display: flex; /* show as flex when opened */
+  display: flex; /* Show as flex when opened */
   flex-direction: column;
   gap: 10px;
 }
@@ -54,38 +56,44 @@
   font-size: 18px;
 }
 
-/* Hamburger Menu Icon (default hidden on desktop) */
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
+  .header-container {
+    flex-direction: row; /* Make sure items are aligned horizontally */
+    justify-content: space-between;
+  }
+
   .nav {
-    display: none; /* hide menu by default on mobile */
+    display: none; /* Hide menu by default on mobile */
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 60px; /* adjust below header */
-    right: 20px;
+    top: 60px; /* Adjust below header */
+    right: 0;
+    left: 0;
     background: #fff;
     padding: 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     z-index: 1000;
+    width: 100%; /* Make the menu full width */
   }
 
   .hamburger {
-    display: block; /* show hamburger on mobile */
+    display: block; /* Show hamburger on mobile */
   }
 
   .nav--open {
-    display: flex; /* show menu when open */
+    display: flex; /* Show menu when open */
   }
 
   /* Adjust link font size and padding for mobile */
   .nav a {
     font-size: 20px; /* Bigger font size for readability */
     padding: 10px 0; /* Padding around links */
+  }
+
+  /* Ensure the logo is appropriately sized for mobile */
+  .logo img {
+    width: 200px;  /* Smaller logo for mobile */
   }
 }
