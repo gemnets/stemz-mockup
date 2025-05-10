@@ -22,7 +22,7 @@
 }
 
 .logo img {
-  width: 350px;  /* Adjust as needed */
+  width: 300px;  /* Adjust as needed */
   height: auto;
 }
 
@@ -34,7 +34,7 @@
   height: 25px; /* Set fixed height */
   position: absolute;
   top: 20px; /* Position from the top of the header */
-  right: 10px; /* Position from the right side */
+  right: 20px; /* Position from the right side */
 }
 
 /* Navigation Links */
