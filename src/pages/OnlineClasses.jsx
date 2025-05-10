@@ -10,6 +10,7 @@ import genetics from '../assets/genetics.jpg';
 import microbiology from '../assets/Microbiology.jpg';
 import defaultImg from '../assets/defaultcourseimg.jpg';
 
+
 const OnlineClasses = () => {
   const [courses, setCourses] = useState([]);
 

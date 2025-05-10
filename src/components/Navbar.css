@@ -29,6 +29,10 @@
 /* Hamburger Menu Icon */
 .hamburger {
   display: none; /* Hide hamburger by default */
+  cursor: pointer;
+  width: 30px; /* Set fixed width for better fit */
+  height: 25px; /* Set fixed height */
+  position: relative;
 }
 
 /* Navigation Links */
@@ -43,6 +47,7 @@
   gap: 10px;
 }
 
+/* Link Styling */
 .nav a {
   text-decoration: none;
   color: #333;
@@ -50,11 +55,11 @@
 }
 
 /* Hamburger Menu Icon (default hidden on desktop) */
-/* Header.module.css */
 .hamburger {
   display: none;
   cursor: pointer;
 }
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav {
@@ -76,5 +81,11 @@
 
   .nav--open {
     display: flex; /* show menu when open */
+  }
+
+  /* Adjust link font size and padding for mobile */
+  .nav a {
+    font-size: 20px; /* Bigger font size for readability */
+    padding: 10px 0; /* Padding around links */
   }
 }
