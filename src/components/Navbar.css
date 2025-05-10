@@ -1,92 +1,63 @@
-/* Basic Styles for Navbar */
-.navbar {
+/* Basic Styling for the Header */
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color: #fff; /* Background color of header */
-  position: relative;
+  padding: 20px; /* Adjust as needed */
+  width: 100%;
 }
 
-/* Hamburger Menu */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1500px; /* Adjust according to your desired layout */
+  margin: 0 auto;
+}
+
+.logo {
+  margin-left: auto; /* Push logo to the right */
+  padding-right: 190px; /* Add extra padding to move it further right */
+}
+
+.logo img {
+  width: 350px;  /* Adjust as needed */
+  height: auto;
+}
+
+/* Hamburger Menu Icon */
 .hamburger {
-  display: none; /* Hidden by default */
-  cursor: pointer;
+  display: none; /* Hide hamburger by default */
 }
 
-.hamburger svg {
-  width: 30px;
-  height: 30px;
-  color: black; /* Black color for hamburger icon */
-}
-
-/* Logo */
-.logo a {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-
-/* Menu Items */
-.nav-links {
+/* Navigation Links */
+.nav {
   display: flex;
-  list-style-type: none;
-  padding: 0;
+  gap: 10px;
 }
 
-.nav-links ul {
-  display: flex;
-  margin: 0;
-}
-
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #333;
-  font-size: 18px;
-  font-weight: normal;
-}
-
-.nav-links.active {
+.nav--open {
   display: block;
 }
 
-/* Mobile View */
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+}
+
+/* For mobile screens */
 @media (max-width: 768px) {
   .hamburger {
-    display: block; /* Show hamburger on mobile */
-    position: absolute;
-    left: 20px;
-    top: 20px;
+    display: block; /* Show hamburger menu */
   }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: white;
-    width: 100%;
-    height: calc(100vh - 60px); /* Full height of the screen */
+  .nav {
+    display: none; /* Hide navigation by default */
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    display: none; /* Hide by default */
+    gap: 5px;
   }
-
-  .nav-links.active {
-    display: flex; /* Show menu when active */
-  }
-
-  .nav-links li {
-    margin: 20px 0; /* Vertical margin for items */
-  }
-
-  .nav-links a {
-    font-size: 24px; /* Bigger font size for mobile */
+  .nav--open {
+    display: flex;
   }
 }

@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import '../components/PhotoCarousel.css'; // Correct path to the CSS file
 import PhotoCarousel from '../components/MobilePhotoCarousel';
+import '../components/Navbar.css';
 
 
 function Home() {

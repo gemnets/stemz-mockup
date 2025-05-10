@@ -12,9 +12,9 @@ function Header() {
   return (
     <header className="header">
       <div className="header-container">
+        {/* Logo */}
         <div className="logo">
           <img src={stemzLogo} alt="STEMz Learning Logo" />
-          <span>STEMz Learning</span>
         </div>
 
         {/* Hamburger Menu Icon */}
