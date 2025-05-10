@@ -9,7 +9,7 @@ import News from './pages/News';
 import GetInvolved from './pages/GetInvolved';
 import Contact from './pages/Contact';
 import Login from './pages/Login'; 
-// import Navbar from './components/Navbar';  // ← REMOVED this line
+
 
 function App() {
   return (
