@@ -119,7 +119,7 @@
 }
 
 .feature-card h3 {
-  font-size: 8.25rem;
+  font-size: 1.50rem;
   color: var(--green-primary);
   margin-bottom: 0.5rem;
 }
@@ -186,40 +186,7 @@
     grid-template-columns: 1fr;
   }
 
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    padding: 10px;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: var(--green-primary);
-    margin: 5px 0;
-    transition: all 0.3s ease;
-  }
-
-
-  .hamburger.open span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 8px;
-  }
-
-  .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: -8px;
-  }
-}
-
+  
 /* Large Screen (Desktop) Responsiveness */
 @media (min-width: 1200px) {
   .hero {
@@ -253,3 +220,20 @@
   }
 }
 
+/* Now your @media query starts */
+@media (max-width: 768px) {
+  /* Ensure the .features container doesn't overflow */
+  .features {
+    grid-template-columns: 1fr;
+    padding: 0 1rem; /* Add padding to ensure no overflow */
+    box-sizing: border-box; /* Include padding in element's width */
+  }
+
+  /* Fix feature card width for mobile */
+  .feature-card {
+    width: 100%; /* Ensure cards take full available width */
+    margin-left: 0; /* Remove any left margin */
+    margin-right: 0; /* Remove any right margin */
+  }
+ }
+} 
