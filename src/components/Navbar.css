@@ -15,7 +15,7 @@
   max-width: 1500px;
   margin: 0 auto;
   padding: 0 20px; /* Avoid content touching the edges */
-  
+  position: relative; /* Ensure positioning context for absolute elements */
 }
 
 .logo {
@@ -29,24 +29,19 @@
 }
 
 .hamburger {
-  display: none !important;
+  display: none;
   cursor: pointer;
   width: 30px;
   height: 25px;
   position: absolute;
   top: 20px;
   right: 45px;
+  z-index: 1100; /* Ensure it's above other elements */
 }
 
 .nav {
   display: flex;
   gap: 35px;
-}
-
-.nav--open {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .nav a {
@@ -55,6 +50,7 @@
   font-size: 19px;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
   .header-container {
     flex-direction: row;
@@ -76,12 +72,12 @@
     width: 100%;
   }
 
-  .hamburger {
-    display: block !important;
+  .nav.nav--open {
+    display: flex;
   }
 
-  .nav--open {
-    display: flex;
+  .hamburger {
+    display: block;
   }
 
   .nav a {
@@ -93,5 +89,3 @@
     width: 200px;
   }
 }
-
-

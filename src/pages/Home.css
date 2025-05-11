@@ -18,13 +18,11 @@
 
 .hero h1 {
   font-size: 4.5rem;
-  
 }
 
 .hero p {
   margin: 1rem 0 2rem;
   font-size: 1.25rem;
-  
 }
 
 .hero-buttons {
@@ -103,6 +101,7 @@
   max-width: 1000px;
   margin: 2rem auto;
   padding: 2rem 1rem;
+  box-sizing: border-box; /* Prevent overflow */
 }
 
 .feature-card {
@@ -113,17 +112,17 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .feature-card h3 {
-  font-size: 1.50rem;
+  font-size: 1.5rem;
   color: var(--green-primary);
   margin-bottom: 0.5rem;
 }
-
 
 .features {
   margin-bottom: 50px;
@@ -137,7 +136,7 @@
 .feature-card p {
   color: black;
   margin-bottom: 1rem;
-  font-size: 1.2rem;  /* Increased font size */
+  font-size: 1.2rem; /* Increased font size */
 }
 
 /* Increase font size of the button text */
@@ -149,11 +148,11 @@
   font-size: 1.2rem; /* Increased font size */
   cursor: pointer;
 }
+
 .link-btn:hover,
 .link-btn:focus {
   text-decoration: underline;
 }
-
 
 .footer {
   background-color: var(--green-dark);
@@ -184,9 +183,17 @@
 
   .features {
     grid-template-columns: 1fr;
+    padding: 0 1rem; /* Prevents overflow */
   }
 
-  
+  .feature-card {
+    width: 100%; /* Ensures the cards take full width */
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box; /* Includes padding in element's width */
+  }
+}
+
 /* Large Screen (Desktop) Responsiveness */
 @media (min-width: 1200px) {
   .hero {
@@ -219,21 +226,3 @@
     font-size: 1.5rem;
   }
 }
-
-/* Now your @media query starts */
-@media (max-width: 768px) {
-  /* Ensure the .features container doesn't overflow */
-  .features {
-    grid-template-columns: 1fr;
-    padding: 0 1rem; /* Add padding to ensure no overflow */
-    box-sizing: border-box; /* Include padding in element's width */
-  }
-
-  /* Fix feature card width for mobile */
-  .feature-card {
-    width: 100%; /* Ensure cards take full available width */
-    margin-left: 0; /* Remove any left margin */
-    margin-right: 0; /* Remove any right margin */
-  }
- }
-} 
