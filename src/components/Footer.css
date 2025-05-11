@@ -83,3 +83,6 @@ body {
     gap: 20px;
   }
 }
+.footer-text {
+  color: black; /* Change the text color to black */
+}
