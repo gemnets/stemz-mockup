@@ -18,7 +18,7 @@ function Home() {
         <h1>Education Through Experimentation</h1>
         <p>Making engaging curriculum accessible to all.</p>
         <div className="hero-buttons">
-          <button className="primary-btn">Sign Up for Classes</button>
+          <Link to="/online-classes" className="primary-btn">Sign Up for Classes</Link>
           <button className="secondary-btn">Access Curriculum</button>
           <Link to="/login" className="primary-btn">Login</Link>
         </div>
@@ -75,10 +75,11 @@ function Home() {
           <button className="link-btn">Apply →</button>
         </div>
         <div className="feature-card">
-          <h3>Connecting with Community</h3>
+          <h3>Community</h3>
           <p>
             We’re partnering with local schools and programs to host engaging in-person STEM events.
           </p>
+          <button className="link-btn">Get Involved →</button>
         </div>
       </section>
 

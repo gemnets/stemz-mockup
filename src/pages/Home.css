@@ -107,37 +107,48 @@
 
 .feature-card {
   background-color: var(--white);
-  border: 1px solid var(--green-light);
+  border: 2px solid var(--green-primary); /* Changed from green-light to green-primary */
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .feature-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .feature-card h3 {
-  font-size: 1.25rem;
+  font-size: 8.25rem;
   color: var(--green-primary);
   margin-bottom: 0.5rem;
 }
 
-.feature-card p {
-  color: var(--gray-lighter);
-  margin-bottom: 1rem;
+
+.features {
+  margin-bottom: 50px;
 }
 
+.feature-card {
+  margin-bottom: 20px;
+}
+
+/* Increase font size of the body text */
+.feature-card p {
+  color: black;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;  /* Increased font size */
+}
+
+/* Increase font size of the button text */
 .link-btn {
   background: none;
   color: var(--green-primary);
   border: none;
   font-weight: bold;
+  font-size: 1.2rem; /* Increased font size */
   cursor: pointer;
 }
-
 .link-btn:hover,
 .link-btn:focus {
   text-decoration: underline;

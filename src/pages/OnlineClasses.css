@@ -7,13 +7,13 @@
 }
 
 .course-card {
-  background-color: #f5f5f5;
+  background-color: #fffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease-in-out;
-  width: 100%;
+  width: 80%;
 }
 
 .course-card:hover {
@@ -71,4 +71,13 @@
   }
 }
 
+/* Add this CSS at the bottom of the OnlineClasses specific page styling or in Navbar.css */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: row;  /* Ensures logo and hamburger appear as expected */
+  }
 
+  .nav {
+    display: none;
+  }
+}

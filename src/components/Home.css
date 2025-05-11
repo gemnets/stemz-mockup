@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 35vh; /* reduced height */
+  height: 42vh; /* reduced height */
   background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
   color: #ffffff;
   text-align: center;
@@ -97,18 +97,19 @@
 
 .mission-who-row {
   display: flex;
-  justify-content: center; /* center all three items */
+  justify-content: center;
   align-items: stretch;
   gap: 40px;
-  margin: 80px auto;
-  padding: 40px;
+  margin: 40px auto 20px auto; /* top 40px, bottom 20px */
   max-width: 1400px;
-  }
+  margin-bottom: 0; /* Remove bottom margin */
+  padding: 0; /* Remove all padding */
+}
 
 .map-image {
   flex: 1;
   max-width: 350px;
-  margin-left: -60px; /* shift slightly left */
+  margin-left: -90px; /* shift slightly left */
 }
 
 .mission-box, .who-box {
@@ -134,8 +135,12 @@
 
 .vertical-separator {
   width: 3px;
-  background: #3498db;
-  border-radius: 5px;
+  min-height: 260px;
+  background: linear-gradient(to bottom, #0d8caf, #1eca0f);
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0, 8, 19, 0.4);
+  margin: 0 20px;
+  flex-shrink: 0; /* Prevent shrinking */
 }
 
 @media (max-width: 768px) {
@@ -153,10 +158,19 @@
   }
 }
 
-.features {
-  margin-bottom: 50px;
+.our-work {
+  margin-top: 0 !important; /* Ensure no top margin */
+  padding-top: 0 !important; /* Ensure no top padding */
+  margin-bottom: 0 !important; /* Ensure no bottom margin */
+  padding-bottom: 0 !important; /* Ensure no bottom padding */
 }
 
-.feature-card {
-  margin-bottom: 20px;
+.our-work h2 {
+  margin-top: 0 !important; /* Ensure no margin on top */
+  margin-bottom: 0 !important; /* Ensure no margin on bottom */
+}
+
+section {
+  margin: 0;  /* Remove all margins from sections */
+  padding: 0;  /* Remove all padding from sections */
 }
