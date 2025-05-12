@@ -24,32 +24,29 @@ function Home() {
         </div>
       </section>
 
-      {/* Mission + Who side by side row with separator */}
       <section className="section mission-who-row">
-         {/* ✅ Added map image on the left */}
-        <img src={mapImage} alt="Map" className="map-image" />
-        
-        {/* Now the "Who Are We?" section comes before the mission statement */}
-        <div className="who-box">
-          <h2> Who Are We?</h2>
-          <p>
-            STEMz Learning is a youth-led outreach 501(c)3 nonprofit based in Folsom, California, making STEM
-            education accessible to elementary school students, grades 1–6. We provide free curriculum for
-            both self-guided and parent-guided learners as well as free online courses.
-          </p>
-        </div>
+  <div className="mission-box">
+    <h2>Mission Statement</h2>
+    <p>
+      STEMz Learning strives to provide elementary school students with curriculum centered around
+      experiments and hands-on learning. Our main goal is to introduce complex topics in palatable,
+      engaging ways that inspire kids to learn more.
+    </p>
+  </div>
 
-        <div className="vertical-separator"></div>
+  <div className="vertical-separator"></div>
 
-        <div className="mission-box">
-          <h2> Mission Statement</h2>
-          <p>
-            STEMz Learning strives to provide elementary school students with curriculum centered around
-            experiments and hands-on learning. Our main goal is to introduce complex topics in palatable,
-            engaging ways that inspire kids to learn more.
-          </p>
-        </div>
-      </section>
+  <div className="who-box">
+    <h2>Who Are We?</h2>
+    <p>
+      STEMz Learning is a youth-led outreach 501(c)3 nonprofit based in Folsom, California, making STEM
+      education accessible to elementary school students, grades 1–6. We provide free curriculum for
+      both self-guided and parent-guided learners as well as free online courses.
+    </p>
+  </div>
+
+  <img src={mapImage} alt="Map" className="map-image" />
+</section>
 
       {/* Our Work in Action slider section */}
       <section className="section our-work">
